@@ -1,0 +1,59 @@
+body {
+max-width: 60em;
+margin: 0 auto 0 auto;
+font: bold;
+}
+
+table, th, td {
+border-collapse: collapse;
+border: 1px solid #010;
+padding: 1em;
+font: bold;
+background-color: lightskyblue;
+}
+
+/* Starting with Poe homepage specific styles */
+.bodypoe {
+    background-image: url("../images/poe-portrait.png");
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: 300px;   
+}
+
+.h1poe {background-color: peachpuff;}
+
+.ppoe {background-color: palegoldenrod;}
+
+/* These are Lenore specific styles */
+.bodylenore {
+    background-image: url("../images/lenore.jpg");
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 600px;
+}
+
+.h1lenore {color: crimson;}
+
+.h2lenore {color: dodgerblue;}
+
+/* Tell-Tale Heart specific styles */
+.h1heart {
+    color: darkred;
+    background-image: url("../images/heart.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 55px;
+}
+
+.h2heart {background-color: aqua;}
+.pheart {background-color: lavenderblush;}
+
+/* These stanza styles can be incorporated anywhere, though they are on just the Lenore page for now */
+.p1stanza {color: darkgreen;}
+
+.p2stanza {color: darkviolet;}
+
+.p3stanza {color: firebrick;}
+
+.p4stanza {color: slateblue;}
+
