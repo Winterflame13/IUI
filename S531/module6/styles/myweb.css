@@ -1,0 +1,108 @@
+        img { 
+			max-width: 50%;
+			float: left; /* YOU CAN FLOAT AN ELEMENT WITHIN A GRID AREA */
+		} /*How can you change image sizes depending on where they are?*/
+		
+		video {
+		    max-width: 50%;
+		    height: auto;
+		    float: right;
+		}
+		
+		header {
+            grid-area: header;
+            background-color: skyblue;
+        }
+
+        nav {
+            grid-area: nav;
+            background-color: yellow;
+        }
+
+        main {
+            grid-area: main;
+            background-color: lavender;
+        }
+
+        aside {
+            grid-area: aside;
+            background-color: lightpink;
+        }
+
+        footer {
+            grid-area: footer;
+            background-color: lightgreen;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-areas:
+                'header header header header header aside'
+                'nav nav main main main aside'
+                'nav nav main main main aside'
+                'nav nav main main main aside'
+				'footer footer footer footer footer footer';
+            grid-gap: .5em;
+            padding: .5em;
+			
+			/* GIVE CONTAINER A WIDTH AND MARGINS IF YOU DO NOT WANT FULL SCREEN */
+			margin: auto;
+        }
+
+
+        ul li {
+            list-style-type: none;
+        }
+
+
+        /*FIRST BREAK POINT === tablet */
+        @media only screen and (max-width : 900px) {
+            body {
+                background: lightblue;
+            }
+
+            .grid-container {
+                display: grid;
+                grid-template-areas:
+                    'header header header header header header'
+					'nav nav nav nav nav nav'
+                    'main main main main aside aside'
+                    'footer footer footer footer footer footer';
+                grid-gap: .5em;
+                padding: .5em;
+            }
+
+            ul li {
+                display: inline-block;
+            }
+
+        }
+
+        /*SECOND BREAK POINT === mobile */
+        @media only screen and (max-width : 600px) {
+
+            body {
+                background: lavender;
+            }
+
+            .grid-container {
+                display: grid;
+                grid-template-areas:
+                    'nav nav nav nav nav nav'
+                    'header header header header header header'
+                    'main main main main main main'
+                    'aside aside aside aside aside aside'
+                    'footer footer footer footer footer footer';
+                grid-gap: .5em;
+                padding: .5em;
+            }
+
+            ul li {
+                display: inline-block;
+            }
+			
+			img {
+				display: none; /* AND YOU CAN MAKE THINGS DISAPPEAR WHEN NOT NEEDED */
+			}
+
+        }
